@@ -1,8 +1,15 @@
-import type { AppLoadContext } from "@remix-run/cloudflare";
-import { drizzle } from "drizzle-orm/d1";
+import { PrismaClient } from "@prisma/client";
 
-export function initDB(context: AppLoadContext) {
-  return drizzle(context.env.DB);
+declare global {
+  var prisma: PrismaClient;
 }
 
-export * as schema from "../drizzle/schema";
+if (process.env.NODE_ENV !== "production") {
+  if (!global.prisma) {
+    global.prisma = new PrismaClient();
+  }
+}
+
+const prisma: PrismaClient = global.prisma || new PrismaClient();
+
+export default prisma;

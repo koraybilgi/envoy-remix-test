@@ -1,5 +1,5 @@
 {
-  "name": "remix-cf-demo-app",
+  "name": "envoy-remix-test",
   "private": true,
   "engines": {
     "node": ">=18.0.0"
@@ -23,6 +23,8 @@
     "shopify": "shopify"
   },
   "dependencies": {
+    "@prisma/adapter-d1": "^5.21.1",
+    "@prisma/client": "^5.21.1",
     "@remix-run/cloudflare": "^2.4.1",
     "@remix-run/cloudflare-pages": "^2.4.1",
     "@remix-run/css-bundle": "^2.4.1",
@@ -31,13 +33,16 @@
     "@remix-run/react": "^2.0.0",
     "@remix-run/serve": "^2.0.0",
     "@shopify/app": "3.52.0",
+    "@shopify/polaris-viz": "^15.2.2",
+    "@shopify/app-bridge-react": "^4.1.2",
     "@shopify/cli": "3.52.0",
-    "@shopify/polaris": "^12.0.0",
-    "@shopify/shopify-api": "^8.0.2",
-    "@shopify/shopify-app-remix": "^2.1.0",
-    "@shopify/shopify-app-session-storage-kv": "^2.0.2",
-    "drizzle-orm": "^0.29.2",
+    "@shopify/polaris": "^12.27.0",
+    "@shopify/polaris-icons": "^9.3.0",
+    "@shopify/shopify-api": "^11.6.0",
+    "@shopify/shopify-app-remix": "^3.4.0",
+    "@shopify/shopify-app-session-storage-prisma": "^5.1.5",
     "isbot": "latest",
+    "prisma": "^5.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

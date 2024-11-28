@@ -8,6 +8,7 @@ import polarisStyles from "@shopify/polaris/build/esm/styles.css";
 import { boundary } from "@shopify/shopify-app-remix/server";
 import { AppProvider } from "@shopify/shopify-app-remix/react";
 import { initShopify } from "../shopify.server";
+import { NavMenu } from "@shopify/app-bridge-react";
 
 export const links = () => [{ rel: "stylesheet", href: polarisStyles }];
 
@@ -22,12 +23,16 @@ export default function App() {
 
   return (
     <AppProvider isEmbeddedApp apiKey={apiKey}>
-      <ui-nav-menu>
-        <Link to="/app" rel="home">
-          Home
-        </Link>
-        <Link to="/app/additional">Additional page</Link>
-      </ui-nav-menu>
+      <NavMenu>
+        <Link to="/app" rel="home">Home</Link>
+        <Link to="/app/orders">Orders</Link>
+        <Link to="/app/rules">Rules</Link>
+        <Link to="/app/templates">Templates</Link>
+        <Link to="/app/activities">Event Timeline</Link>
+        {/*<Link to="/app/reports">Reports</Link>*/}
+        <Link to="/app/settings">Settings</Link>
+        <Link to="/app/contactus">Contact Us</Link>
+      </NavMenu>
       <Outlet />
     </AppProvider>
   );
