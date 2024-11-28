@@ -1,0 +1,10 @@
+name = "remix-cf-pages-shopify-app"
+compatibility_date = "2024-04-01"
+compatibility_flags = [ "nodejs_compat" ]
+pages_build_output_dir = "./public"
+
+[[d1_databases]]
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "dev-remix-cf-demo"
+database_id = "ae3b1079-ab51-4c1f-9800-dd3795854eae"
+preview_database_id = "DB"
