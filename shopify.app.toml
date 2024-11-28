@@ -1,27 +1,29 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-name = "remix-cf-demo-app"
 client_id = "04623d2fe360d12f1ee7406404f9b515"
-application_url = "http://localhost:8788"
+name = "Envoy Remix"
+handle = "envoy-remix"
+application_url = "http://remix-cf-pages-shopify-app.pages.dev"
 embedded = true
+
+[build]
+automatically_update_urls_on_dev = false
+dev_store_url = "quickstart-b210b56d.myshopify.com"
+include_config_on_deploy = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+scopes = "read_customers,read_order_edits,read_orders,read_products,write_orders,write_products"
 
 [auth]
 redirect_urls = [
-  "http://localhost:8788/auth/callback",
-  "http://localhost:8788/auth/shopify/callback",
-  "http://localhost:8788/api/auth/callback"
+  "http://remix-cf-pages-shopify-app.pages.dev/auth/callback",
+  "http://remix-cf-pages-shopify-app.pages.dev/auth/shopify/callback",
+  "http://remix-cf-pages-shopify-app.pages.dev/api/auth/callback"
 ]
 
 [webhooks]
-api_version = "2023-10"
+api_version = "2024-10"
 
 [pos]
 embedded = false
-
-[build]
-automatically_update_urls_on_dev = true
-dev_store_url = "remix-cloudflare-app-demo.myshopify.com"
