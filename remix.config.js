@@ -1,4 +1,4 @@
-import fs from "fs";
+//import fs from "fs";
 
 // Related: https://github.com/remix-run/remix/issues/2835#issuecomment-1144102176
 // Replace the HOST env var with SHOPIFY_APP_URL so that it doesn't break the remix server. The CLI will eventually
@@ -13,13 +13,14 @@ if (
 }
 
 // Binds env vars for local development with Cloudflare pages
+/*
 if (process.env.NODE_ENV === "development") {
   fs.writeFileSync(
     ".dev.vars",
     `SHOPIFY_APP_URL=${process.env.SHOPIFY_APP_URL}\nSHOPIFY_API_KEY=${process.env.SHOPIFY_API_KEY}\nSHOPIFY_API_SECRET=${process.env.SHOPIFY_API_SECRET}\nSCOPES=${process.env.SCOPES}\n`,
   );
 }
-
+*/
 /** @type {import('@remix-run/dev').AppConfig} */
 export default {
   ignoredRouteFiles: ["**/.*"],
