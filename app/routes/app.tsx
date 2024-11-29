@@ -8,7 +8,9 @@ import polarisStyles from "@shopify/polaris/build/esm/styles.css";
 import { boundary } from "@shopify/shopify-app-remix/server";
 import { AppProvider } from "@shopify/shopify-app-remix/react";
 import { initShopify } from "../shopify.server";
+import enTranslations from '@shopify/polaris/locales/en.json';
 import { NavMenu } from "@shopify/app-bridge-react";
+import { AppProviderOverride } from "~/app-provider-override";
 
 export const links = () => [{ rel: "stylesheet", href: polarisStyles }];
 
@@ -22,7 +24,7 @@ export default function App() {
   const { apiKey } = useLoaderData<typeof loader>();
 
   return (
-    <AppProvider isEmbeddedApp apiKey={apiKey}>
+    <AppProviderOverride isEmbeddedApp apiKey={apiKey} i18n={enTranslations}>
       <NavMenu>
         <Link to="/app" rel="home">Home</Link>
         <Link to="/app/orders">Orders</Link>
@@ -34,7 +36,7 @@ export default function App() {
         <Link to="/app/contactus">Contact Us</Link>
       </NavMenu>
       <Outlet />
-    </AppProvider>
+    </AppProviderOverride>
   );
 }
 
