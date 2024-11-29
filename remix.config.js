@@ -35,7 +35,13 @@ export default {
   dev: {
     command: `npm start -- --port=${process.env.PORT}`,
     manual: true,
-    port: process.env.HMR_SERVER_PORT || 8002,
+    port: parseInt(process.env.HMR_SERVER_PORT || "8002"),
   },
   future: {},
+  serverNodeBuiltinsPolyfill: {
+    modules: {
+      crypto: true,
+      buffer: true,
+    },
+  },
 };
