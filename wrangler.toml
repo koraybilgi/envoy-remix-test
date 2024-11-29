@@ -9,3 +9,10 @@ database_name = "envoy-db"
 database_id = "6a6d687b-58c6-4b41-a133-ccb54028348e"
 preview_database_id = "DB"
 migrations_dir = "./prisma/migrations"
+
+
+[vars]
+SHOPIFY_APP_URL = "http://remix-cf-pages-shopify-app.pages.dev"
+SHOPIFY_API_KEY = "04623d2fe360d12f1ee7406404f9b515"
+SHOPIFY_API_SECRET = "90e8ca7e20af168398e98411aefc5adb"
+SCOPES = "read_customers,read_order_edits,read_orders,read_products,write_orders,write_products"
