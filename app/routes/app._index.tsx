@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, Page } from "@shopify/polaris";
-import { SetupGuide } from "../components/setupguide/setupguide";
+import { SetupGuide, SetupItemProps } from "../components/setupguide/setupguide";
 
 const _index = () => {
   const [showGuide, setShowGuide] = useState(true);
@@ -37,7 +37,7 @@ const _index = () => {
 };
 
 // EXAMPLE DATA - COMPONENT API
-const ITEMS = [
+const ITEMS: SetupItemProps[] = [
   {
     id: 0,
     title: "Add your first product",
@@ -87,6 +87,7 @@ const ITEMS = [
       "Translating your store improves cross-border conversion by an average of 13%. Add languages for your top customer regions for localized browsing, notifications, and checkout.",
     image: {
       url: "https://cdn.shopify.com/b/shopify-guidance-dashboard-public/nqjyaxwdnkg722ml73r6dmci3cpn.svgz",
+      alt: "Illustration showing an online storefront with a 'share' icon in top right corner",
     },
     complete: false,
     primaryButton: {

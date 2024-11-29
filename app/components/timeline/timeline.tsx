@@ -65,14 +65,14 @@ export default function Timeline({ items }) {
                       <Icon source={bulletIcon} tone={item.tone} />
                     </span>
                   </div>
-                  <Box className={styles['timeline-event-description']}>
+                  <div className={styles['timeline-event-description']}>
                     <InlineStack gap='200' wrap={false} blockAlign='start'>
                       {item.url ? (
                         <Link url={item.url} monochrome removeUnderline>
                           <InlineStack gap='0' wrap={false} blockAlign='start'>
-                            <Box className={styles['timeline-event-link-main']}>
+                            <div className={styles['timeline-event-link-main']}>
                               {item.timelineEvent}
-                            </Box>
+                            </div>
                             <Icon source={ChevronRightIcon} />
                           </InlineStack>
                         </Link>
@@ -80,7 +80,7 @@ export default function Timeline({ items }) {
                         <Box>{item.timelineEvent}</Box>
                       )}
                     </InlineStack>
-                  </Box>
+                  </div>
                 </InlineGrid>
               </Fragment>
             );

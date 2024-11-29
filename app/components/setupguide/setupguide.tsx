@@ -26,7 +26,7 @@ import {
 } from '@shopify/polaris-icons';
 import styles from './setupguide.module.css';
 
-type SetupItemProps = {
+export type SetupItemProps = {
   id: number;
   title: string;
   description: string;
