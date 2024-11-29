@@ -10,7 +10,7 @@ import { AppProvider } from "@shopify/shopify-app-remix/react";
 import { initShopify } from "../shopify.server";
 import enTranslations from '@shopify/polaris/locales/en.json';
 import { NavMenu } from "@shopify/app-bridge-react";
-import { AppProviderOverride } from "~/app-provider-override";
+import { AppProviderOverride } from "../app-provider-override";
 
 export const links = () => [{ rel: "stylesheet", href: polarisStyles }];
 
