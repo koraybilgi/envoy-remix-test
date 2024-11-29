@@ -42,6 +42,7 @@ export default {
     modules: {
       crypto: true,
       buffer: true,
+      stream: true,
     },
   },
 };
